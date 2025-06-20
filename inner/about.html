@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me - Om Kumar</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0a0a23;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      background: #0f172a;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      color: #38bdf8;
+    }
+
+    nav a {
+      margin-left: 20px;
+      color: #fff;
+      font-weight: 500;
+    }
+
+    section.about {
+      padding: 80px 20px;
+      background-color: #0a0a23;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      max-width: 1100px;
+      margin: auto;
+      gap: 40px;
+    }
+
+    .about-img {
+      flex: 1;
+      min-width: 280px;
+      text-align: center;
+    }
+
+    .about-img img {
+      /* width: 400px;
+      height: 400px; */
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 0 30px #38bdf8;
+      margin-left: -200px;
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .about-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    .about-text h2 span {
+      color: #38bdf8;
+    }
+
+    .about-text p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background: #0f172a;
+      text-align: center;
+      padding: 20px;
+      color: #aaa;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      .about-img img {
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      nav a {
+        margin-left: 10px;
+        font-size: 0.9rem;
+      }
+
+      .about-text h2 {
+        font-size: 2rem;
+      }
+
+      .about-text p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Om Kumar</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="skills.html">Skills</a>
+      <a href="project.html">Projects</a>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <!-- Left: Image -->
+      <div class="about-img">
+        <img src="../image/me.jpg" alt="Om Kumar">
+      </div>
+
+      <!-- Right: Text -->
+      <div class="about-text">
+        <h2>About <span>Me</span></h2>
+        <p>I’m <strong style="color: #38bdf8;">Om Kumar</strong>, a Computer Science (Data Science) student in my
+          <strong>3rd year</strong> at Government Engineering College, Sheohar. Passionate about <strong>Frontend
+            Development</strong> and constantly exploring new technologies.</p>
+
+        <p>My technical toolkit includes <strong>C, C++, Python (basic)</strong>, and solid foundations in
+          <strong>HTML, CSS, JavaScript</strong>. I’m also familiar with basic backend development and data structures &
+          algorithms in C.</p>
+
+        <p>I’ve completed <strong>virtual internships</strong> with <span style="color: #38bdf8;">Cisco</span> and
+          <span style="color: #38bdf8;">Salesforce</span>, and I’m certified in Python, C, C++ (Spoken Tutorial), and
+          NPTEL’s C Programming & ESD courses.</p>
+
+        <p>My projects include a <strong>College Sports Website</strong> (HTML, CSS, JS) and a <strong>Spam Mail
+            Predictor</strong> using Python (basic ML). I'm enthusiastic about learning, collaborating, and solving
+          real-world challenges.</p>
+
+        <p>Fluent in <strong>Hindi</strong> and proficient in <strong>English</strong>. In my free time, I enjoy
+          learning new tech skills, reading books, and traveling.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; Om Kumar | Portfolio</p>
+  </footer>
+</body>
+
+</html>

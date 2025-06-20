@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Om Kumar - Portfolio</title>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+  <!--for services-->
+  <link rel="stylesheet" href="style.css" />
+  <!--for skills-->
+  <link rel="stylesheet" href="style1.css" />
+  <!--for project-->
+  <link rel="stylesheet" href="style2.css" />
+  <!--footer section-->
+  <link rel="stylesheet" href="style3.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!--for favicon icon-->
+  <link rel="icon" type="image/x-icon" href="favicon.icon.jpeg">
+  <!-- <link rel="icon" type="image/png" href="#" > -->
+
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: #0a0a23;
+      color: white;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #111132;
+      padding: 15px 30px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-left {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #62cdff;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: white;
+    }
+
+    .nav-right {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    .nav-right li a {
+      text-decoration: none;
+      color: #ccc;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+
+    .nav-right li a:hover {
+      color: #fff;
+      border-bottom: 2px solid #62cdff;
+      padding-bottom: 3px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+      }
+
+      .nav-right {
+        display: none;
+        position: absolute;
+        top: 65px;
+        right: 20px;
+        background: #111132;
+        flex-direction: column;
+        width: 230px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      }
+
+      .nav-right.active {
+        display: flex;
+      }
+
+      .nav-right li {
+        margin: 10px 0;
+      }
+    }
+
+
+    /* after header */
+
+
+    section {
+      padding: 100px 60px 60px;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 100px;
+      gap: 40px;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .hero-text h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .hero-text h2 {
+      font-size: 2.2rem;
+      color: #72e0ff;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      color: #ccc;
+      max-width: 500px;
+      line-height: 1.6;
+    }
+
+    .buttons {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .buttons a {
+      padding: 10px 20px;
+      background-color: #4c6fff;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+
+    .buttons a.contact {
+      background: transparent;
+      border: 2px solid #4c6fff;
+    }
+
+    .buttons a:hover {
+      background-color: #3852d5;
+    }
+
+    .avatar {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 280px;
+    }
+
+    .avatar img {
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0 0 60px rgba(114, 224, 255, 0.6);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-15px);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 60px;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      text-align: center;
+      padding: 15px 25px;
+      background-color: #111132;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(98, 205, 255, 0.2);
+      flex: 1 1 200px;
+      max-width: 240px;
+    }
+
+    .stat h3 {
+      font-size: 2rem;
+      color: #72e0ff;
+    }
+
+    .stat p {
+      font-size: 1rem;
+      color: #bbb;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      color: #62cdff;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      color: #ddd;
+      line-height: 1.6;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: white;
+      text-align: center;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    @media(max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+
+      nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: #111132;
+        padding: 15px 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        width: max-content;
+        z-index: 999;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+
+      section {
+        padding: 80px 20px;
+      }
+    }
+
+    @media(max-width: 480px) {
+      .hero-text h1 {
+        font-size: 2rem;
+      }
+
+      .hero-text h2 {
+        font-size: 1.5rem;
+      }
+
+      .hero-text p {
+        font-size: 1rem;
+      }
+    }
+
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 100;
+      background-color: #00BFFF;
+      color: white;
+      border: none;
+      outline: none;
+      padding: 12px 15px;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+      display: none;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    #scrollTopBtn:hover {
+      background-color: #00aaff;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav-left">Portfolio</div>
+    <div class="hamburger" onclick="toggleMenu()" id="hamburger">☰</div>
+    <ul class="nav-right" id="navLinks">
+      <li><a href="">Home</a></li>
+      <li><a href="inner/about.html">About</a></li>
+      <li><a href="inner/skills.html">Skills</a></li>
+      <li><a href="inner/service.html">Services</a></li>
+      <li><a href="inner/project.html">Projects</a></li>
+      <li><a href="inner/contact.html">Contact</a></li>
+      <li><a href="image/OmKumar_resume.pdf" download style="color:#ff4dd2;"><strong>Download Resume ⬇️</strong></a></li>
+    </ul>
+  </header>
+
+
+  <section id="home" class="hero">
+    <div class="hero-text" data-aos="fade-right">
+      <h1>Hello, I'm</h1>
+      <h2>Om Kumar</h2>
+      <p>I’m a Frontend Developer passionate about creating stunning and responsive web applications. Let’s build
+        something amazing.</p>
+      <div class="buttons">
+        <a href="inner/hireme.html">Hire Me</a>
+        <a href="inner/contact.html" class="contact">Contact Me</a>
+      </div>
+    </div>
+    <div class="avatar" data-aos="fade-left">
+      <img src="image/me.jpg" alt="Om Kumar" />
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stat" data-aos="fade-up">
+      <h3>0</h3>
+      <p>Years of Experience</p>
+    </div>
+    <div class="stat" data-aos="fade-up" data-aos-delay="100">
+      <h3>5+</h3>
+      <p>Projects Completed</p>
+    </div>
+    <div class="stat" data-aos="fade-up" data-aos-delay="200">
+      <h3>2+</h3>
+      <p>Technologies Mastered</p>
+    </div>
+    <div class="stat" data-aos="fade-up" data-aos-delay="300">
+      <h3>0</h3>
+      <p>Satisfied Clients</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>I’m Om Kumar, a Computer Science (Data Science) student currently in my 3rd year at Government Engineering
+        College, Sheohar. I’m passionate about Frontend Development and exploring modern web technologies.</p>
+      <p>I enjoy crafting clean, user-friendly websites and have a strong foundation in HTML, CSS, JavaScript, and
+        C/C++. I'm constantly learning, improving my skills, and applying them through real-world projects.</p>
+      <p>I’ve completed virtual internships with Cisco and Salesforce, and I’m always open to new challenges, learning
+        opportunities, and collaboration.</p>
+    </section>
+  </div><br>
+
+  <section class="skills-section">
+    <h2><span>My</span> Skills</h2>
+    <div class="skills-container">
+
+      <!-- Skill Cards -->
+      <div class="skills-box" data-aos="zoom-in" data-aos-delay="100">
+        <div class="icon">🌐</div>
+        <h3>Frontend Development</h3>
+        <p>HTML for semantic web structure</p>
+        <p>CSS for responsive and attractive layouts</p>
+        <p>JavaScript (Basics) for interactivity</p>
+      </div>
+
+      <div class="skills-box" data-aos="zoom-in" data-aos-delay="200">
+        <div class="icon">🖥️</div>
+        <h3>Backend Development</h3>
+        <p>Understanding server-side logic</p>
+        <p>Basic API handling and routing</p>
+        <p>Concepts of database interaction</p>
+      </div>
+
+      <div class="skills-box" data-aos="zoom-in" data-aos-delay="300">
+        <div class="icon">👨‍💻</div>
+        <h3>Programming Languages</h3>
+        <p>C for structured programming</p>
+        <p>C++ with object-oriented concepts</p>
+        <p>Python (Basics) for scripting & automation</p>
+      </div>
+
+      <!-- <div class="skills-box" data-aos="zoom-in" data-aos-delay="400">
+        <div class="icon">📊</div>
+        <h3>Data Structures & Algorithms</h3>
+        <p>Arrays, Linked Lists, Stacks, Queues</p>
+        <p>Trees, Graphs, Sorting & Searching</p>
+        <p>Implemented in C language</p>
+      </div>
+
+      <div class="skills-box" data-aos="zoom-in" data-aos-delay="500">
+        <div class="icon">🧰</div>
+        <h3>Office Tools</h3>
+        <p>MS Word for documentation</p>
+        <p>Excel for data analysis and charts</p>
+        <p>PowerPoint for presentations</p>
+      </div> -->
+
+      <div class="skills-box" data-aos="zoom-in" data-aos-delay="600">
+        <div class="icon">🤝</div>
+        <h3>Soft Skills</h3>
+        <p>Good communication abilities</p>
+        <p>Team collaboration experience</p>
+        <p>Analytical problem-solving approach</p>
+      </div>
+
+      <!--for more skills details-->
+      <div class="skills-box" data-aos="zoom-in" data-aos-delay="700">
+        <div class="icon">🧠</div>
+        <h3>Want to Know My Skills?</h3>
+        <p>Click below to explore detailed technical and soft skills.</p>
+        <a href="inner/skills.html" class="btn">🔍 Explore Skills</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- AOS Animation -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+
+  <!--end skill section-->
+
+
+  <!-- Services Section -->
+  <section class="services-section">
+    <h2><span>My</span> Services</h2>
+    <div class="services-container">
+
+      <!-- Service 1 -->
+      <div class="service-box">
+        <div class="icon">📱</div>
+        <h3>Responsive Frontend</h3>
+        <p>Building modern, mobile-friendly websites using HTML, CSS & JS.</p>
+        <!-- <a href="inner/service.html" class="btn">More Details</a> -->
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-box">
+        <div class="icon">🧾</div>
+        <h3>Static Websites</h3>
+        <p>Designing fast and efficient static websites for portfolios & events.</p>
+        <!-- <a href="inner/service.html" class="btn">Learn More</a> -->
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-box">
+        <div class="icon">⚙️</div>
+        <h3>App Prototypes</h3>
+        <p>Creating interactive wireframes and web app ideas using HTML/CSS.</p>
+        <!-- <a href="inner/service.html" class="btn">Learn More</a> -->
+      </div>
+
+      <!-- Service 4 -->
+      <!-- <div class="service-box">
+        <div class="icon">🎓</div>
+        <h3>Academic Projects</h3>
+        <p>Assisting students in planning and developing their academic projects.</p>
+        <a href="inner/service.html" class="btn">Learn More</a> 
+      </div> -->
+
+      <!-- Service 5 -->
+      <div class="service-box">
+        <div class="icon">🖥️</div>
+        <h3>Report & PPT Design</h3>
+        <p>Designing attractive MS Word reports and PowerPoint presentations.</p>
+        <!-- <a href="inner/service.html" class="btn">Learn More</a> -->
+      </div>
+
+      <!--for more service details-->
+      <div class="service-box">
+        <div class="icon">🔍</div>
+        <h3>Looking for More?</h3>
+        <p>Click below to explore all services in detail.</p>
+        <a href="inner/service.html" class="btn">🔍 Explore Service</a>
+      </div>
+
+
+    </div>
+  </section>
+  </div>
+
+
+
+  <!--end service section-->
+
+  <!--start project section-->
+
+  <section class="projects-section">
+    <h2><span>My</span> Projects</h2>
+    <div class="projects-container">
+
+      <!-- Project 1 -->
+      <div class="projects-box">
+        <div class="content">
+          <div class="icon">🏅</div>
+          <h3>College Sports Website</h3>
+          <p>Developed a frontend sports event website using HTML, CSS, and JavaScript.</p>
+          <ul>
+            <li>Designed homepage, event list, and event join UI</li>
+            <li>Used particle.js for interactive visual effects</li>
+            <li>Fully responsive design with animated transitions</li>
+          </ul>
+        </div>
+        <!-- <a href="inner/project.html" class="btn">Learn More</a> -->
+      </div>
+
+      <!-- Project 2 -->
+      <div class="projects-box">
+        <div class="content">
+          <div class="icon">📧</div>
+          <h3>Spam Mail Prediction</h3>
+          <p>Machine learning based classification project using Python.</p>
+          <ul>
+            <li>Used datasets to train a Naive Bayes classifier</li>
+            <li>Implemented basic preprocessing and vectorization</li>
+            <li>Command-line interface for spam detection</li>
+            <p style="text-align: center;">👉 : project is still on progress</p>
+          </ul>
+        </div>
+        <!-- <a href="inner/project.html" class="btn">Learn More</a> -->
+      </div>
+
+      <!--explore more project section-->
+      <div class="projects-box">
+        <div class="content">
+          <div class="icon">💻📂</div>
+          <h3>Curious to See What Else I’ve Built?</h3><br>
+          <p style="text-align: center;"><b>Check out my full collection of web projects, design work, or something —
+              all brought together in one
+              place.</b>
+          </p>
+          <div class="icon">↓</div>
+        </div>
+        <a href="inner/project.html" class="btn">🔍 Explore More Projects</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!--Modal -->
+  <div id="projectModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h3>Project Details</h3>
+      <p id="modal-text">Coming Soon...</p>
+    </div>
+  </div>
+
+  <!--end project section-->
+
+
+  <!--toggle menu-->
+  <script>
+    const navLinks = document.getElementById("navLinks");
+    const hamburger = document.getElementById("hamburger");
+
+    function toggleMenu() {
+      navLinks.classList.toggle("active");
+      // Toggle icon ☰ / ✖
+      if (navLinks.classList.contains("active")) {
+        hamburger.textContent = "✖";
+      } else {
+        hamburger.textContent = "☰";
+      }
+    }
+
+    // Close on link click
+    document.querySelectorAll('#navLinks a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove("active");
+        hamburger.textContent = "☰";
+      });
+    });
+
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+      if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+        navLinks.classList.remove("active");
+        hamburger.textContent = "☰";
+      }
+    });
+
+    // Close on scroll
+    window.addEventListener('scroll', () => {
+      navLinks.classList.remove("active");
+      hamburger.textContent = "☰";
+    });
+  </script>
+
+
+  <!--start footer section-->
+
+  <footer class="footer-section">
+    <div class="footer-container">
+      <div class="footer-row">
+
+
+        <!--about-->
+        <div class="footer-col">
+          <h3>About</h3>
+          <p>I’m a Frontend Developer passionate about creating stunning and responsive web applications. Let’s build
+            something amazing.</p>
+        </div>
+
+
+        <!-- Contact Info -->
+        <div class="footer-col">
+          <h3>Contacts</h3>
+          <p>Email: <a href="omkumar00116@gmail.com">omkumar00116@gmail.com</a></p>
+          <p>Phone: +91-8700740710</p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-col">
+          <h3>Find Us On</h3>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/om_kumar_tiwari_?igsh=MWo2OHUxZWpram05ag==" target="_blank"><i
+                class="fab fa-instagram"></i></a> &nbsp;
+            <a href="https://github.com/Omkumartiwarii" target="_blank"><i class="fab fa-github"></i></a> &nbsp;
+            <a href="https://x.com/OMKUMAR00116" target="_blank"><i class="fab fa-twitter"></i></a> &nbsp;
+            <a href="https://www.linkedin.com/in/omkumar00116/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            &nbsp;
+            <a href="https://www.facebook.com/share/16KjwdBgkj/" target="_blank"><i class="fab fa-facebook"></i></a>
+            &nbsp;
+            <a href="https://youtube.com/@omkumartiwari00116?si=jy1VqRY-jGM0cyc2" target="_blank"><i
+                class="fab fa-youtube"></i></a> &nbsp;
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+  <!--end footer section-->
+
+  <!--scroll to top button-->
+  <button id="scrollTopBtn" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  <script>
+    const scrollBtn = document.getElementById("scrollTopBtn");
+
+    window.onscroll = function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    };
+
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+  <!--end the scroll to top button-->
+
+
+
+
+
+</body>
+
+</html>

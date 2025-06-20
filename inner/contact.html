@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="contact.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-left">Contact Me</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="nav-right" id="navLinks">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="../image/OmKumar_resume.pdf" download ><strong>Download Resume ⬇️</strong></a></li>
+    </ul>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="contact-container" id="contactContainer">
+
+      <!-- Left Side -->
+      <div class="contact-left">
+        <h1 class="hover-title">LET’S WORK TOGETHER</h1>
+        <p class="subtitle">Have a project in mind or just want to say hi? I’d love to hear from you.</p>
+
+        <div class="contact-info">
+          <p><strong>📧 Email:</strong>
+            <a href="mailto:omkumar00116@gmail.com">omkumar00116@gmail.com</a>
+          </p>
+          <p><strong>📱 Phone:</strong>
+            <a href="tel:+918700740710">+91 8700740710</a>
+          </p>
+        </div>
+
+        <div class="social-icons">
+          <h3>Find us on :</h3><br>
+          <a href="https://www.linkedin.com/in/omkumar00116/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/Omkumartiwarii" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://x.com/OMKUMAR00116" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.facebook.com/share/16KjwdBgkj/" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/om_kumar_tiwari_?igsh=MWo2OHUxZWpram05ag==" target="_blank"><i
+              class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Right Side -->
+      <div class="contact-right" id="formHoverTarget">
+        <form class="contact-form" onsubmit="submitMessage(event)">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Write us about any project. We’d love to work with you!" required></textarea>
+          <button type="submit">SEND MESSAGE</button>
+          <br>
+          <a href="../image/OmKumar_resume.pdf" class="download-btn" download>Download Resume</a>
+          <div class="form-message" id="formMessage"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hover Effect Script -->
+  <script>
+    const container = document.getElementById('contactContainer');
+    const formSide = document.getElementById('formHoverTarget');
+
+    formSide.addEventListener('mouseenter', () => {
+      container.classList.add('hovered');
+    });
+
+    formSide.addEventListener('mouseleave', () => {
+      container.classList.remove('hovered');
+    });
+
+    function submitMessage(e) {
+      e.preventDefault();
+      const msg = document.getElementById('formMessage');
+      msg.textContent = "Thanks for your message!";
+    }
+  </script>
+
+  <!-- Toggle Navbar Script -->
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("show");
+    }
+  </script>
+
+</body>
+
+</html>

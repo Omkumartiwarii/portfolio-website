@@ -1,0 +1,222 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0a0a23;
+  color: #f1f1f1;
+}
+
+/* Section Container */
+.intro-skills-section {
+  width: 100vw;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Main Layout */
+.skills-container {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  gap: 60px;
+}
+
+/* Left Side */
+.left-side,
+.right-side {
+  padding: 20px;
+  border-radius: 12px;
+  background: transparent;
+}
+
+.left-side {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Right Side */
+.right-side {
+  width: 60%;
+}
+
+/* Profile Image */
+.profile-image img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  box-shadow: 0 0 12px rgba(0, 229, 255, 0.2);
+}
+
+/* Name Heading */
+.name-heading {
+  color: #00e5ff;
+  margin-bottom: 15px;
+}
+
+/* Social Icons */
+.social-links a {
+  font-size: 20px;
+  color: #00e5ff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #ffffff;
+}
+
+/* Contact Button */
+.hire-btn {
+  background: #00e5ff;
+  color: #0a0a23;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin-top: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 30px;
+  color: #00e5ff;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.section-title:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px #00e5ff;
+  transform: scale(1.05);
+}
+
+/* Project Cards Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Each Project Card */
+.skill-card {
+  background: #1a1a2e;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 229, 255, 0.3);
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 10px;
+}
+
+.modal-content {
+  background: #1a1a2e;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  color: #f1f1f1;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  scroll-behavior: smooth;
+}
+
+/* Modal Close Button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Progress Bars (if needed) */
+.skill-box {
+  margin-top: 20px;
+}
+
+.skill-title {
+  margin-bottom: 6px;
+}
+
+.progress-bar {
+  background: #333;
+  height: 8px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progress-bar div {
+  height: 100%;
+  background: #00e5ff;
+}
+
+.skill-desc {
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 6px;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1000px) {
+  .skills-container {
+    flex-direction: column;
+  }
+
+  .left-side,
+  .right-side {
+    width: 100%;
+  }
+
+  .profile-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal-content {
+    width: 95%;
+    padding: 15px;
+    font-size: 14px;
+  }
+}

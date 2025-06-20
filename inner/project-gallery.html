@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elegant Image Gallery</title>
+    <link rel="stylesheet" href="project-gallery.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">GalleryPro</div>
+
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+        <nav>
+            <ul id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="hireme.html">Hire me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="../image/OmKumar_resume.pdf" download style="color:#ff4dd2;"><strong>Download CV
+                            ⬇️</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+    <section class="hero">
+        <h1>Welcome to the Gallery</h1>
+        <p>Explore a curated collection of beautiful images</p>
+    </section>
+
+    <section class="gallery-section">
+        <div class="gallery-header">
+            <h2>Select Preview Gallery:</h2>
+            <select onchange="scrollToSection(this.value)">
+                <option value="">Select 👇</option>
+                <option value="college">College Sports Website</option>
+                <option value="portfolio">Portfolio Website</option>
+                <option value="spam">Spam Mail Prediction</option>
+            </select>
+        </div>
+
+        <!-- College Sports Section -->
+        <h1  id="college">Showcase: College Sports Website Design & Features</h1><br>
+
+        <div class="gallery">
+            <div class="image-container" onclick="openImageModal('../image/collegesportswebsiteimage/img1.png')">
+                <img src="../image/collegesportswebsiteimage/img1.png" alt="Homepage View">
+                <div class="caption">Homepage View</div>
+            </div>
+
+            <div class="image-container" onclick="openImageModal('../image/collegesportswebsiteimage/img2.png')">
+                <img src="../image/collegesportswebsiteimage/img2.png" alt="Event Cards">
+                <div class="caption">Event Cards</div>
+            </div>
+
+            <div class="image-container" onclick="openImageModal('../image/collegesportswebsiteimage/img3.png')">
+                <img src="../image/collegesportswebsiteimage/img3.png" alt="Join Form">
+                <div class="caption">Join Form</div>
+            </div>
+
+            <div class="image-container" onclick="openImageModal('../image/collegesportswebsiteimage/img4.png')">
+                <img src="../image/collegesportswebsiteimage/img4.png" alt="Gallery Page">
+                <div class="caption">Gallery Page</div>
+            </div>
+
+            <div class="image-container" onclick="openImageModal('../image/collegesportswebsiteimage/img5.png')">
+                <img src="../image/collegesportswebsiteimage/img5.png" alt="Contact Section">
+                <div class="caption">Contact Section</div>
+            </div>
+
+            <div class="image-container" onclick="openImageModal('../image/collegesportswebsiteimage/img6.png')">
+                <img src="../image/collegesportswebsiteimage/img6.png" alt="Navbar Design">
+                <div class="caption">Navbar Design</div>
+            </div>
+
+            <div class="image-container" onclick="openImageModal('../image/collegesportswebsiteimage/img7.png')">
+                <img src="../image/collegesportswebsiteimage/img7.png" alt="Particle Background">
+                <div class="caption">Particle Background</div>
+            </div>
+        </div><br><br>
+
+        <!-- Portfolio Website Section -->
+        <h1 id="portfolio"> Showcase: Portfolio Website Design & Features</h1><br>
+        <div class="gallery">
+            <div class="image-container" onclick="openImageModal('../image/portfoliowebiteimage/img1.png')">
+                <img src="../image/portfoliowebiteimage/img1.png" alt="Portfolio Hero Section">
+                <div class="caption">Hero Section</div>
+            </div>
+            <div class="image-container" onclick="openImageModal('../image/portfoliowebiteimage/img2.png')">
+                <img src="../image/portfoliowebiteimage/img2.png" alt="About Section">
+                <div class="caption">Responsive View</div>
+            </div>
+            <div class="image-container" onclick="openImageModal('../image/portfoliowebiteimage/img3.png')">
+                <img src="../image/portfoliowebiteimage/img3.png" alt="Skills Section">
+                <div class="caption">About Section</div>
+            </div>
+            <div class="image-container" onclick="openImageModal('../image/portfoliowebiteimage/img4.png')">
+                <img src="../image/portfoliowebiteimage/img4.png" alt="Projects Section">
+                <div class="caption">Skills Section</div>
+            </div>
+            <div class="image-container" onclick="openImageModal('../image/portfoliowebiteimage/img5.png')">
+                <img src="../image/portfoliowebiteimage/img5.png" alt="Case Study">
+                <div class="caption">Projects Section</div>
+            </div>
+            <div class="image-container" onclick="openImageModal('../image/portfoliowebiteimage/img6.png')">
+                <img src="../image/portfoliowebiteimage/img6.png" alt="Contact Section">
+                <div class="caption">Case Study</div>
+            </div>
+            <div class="image-container" onclick="openImageModal('../image/portfoliowebiteimage/img7.png')">
+                <img src="../image/portfoliowebiteimage/img7.png" alt="Responsive View">
+                <div class="caption">Contact Section</div>
+            </div>
+        </div><br><br>
+
+
+        <!-- Spam Mail Prediction Section -->
+        <h1 id="spam">Showcase: Spam Mail Prediction Design & Features</h1><br>
+
+        <div class="gallery">
+            <div class="image-container" onclick="openImageModal('../image/spammailpredictionimage/img1.jpg')">
+                <img src="../image/spammailpredictionimage/img1.jpg" alt="Terminal CLI Input">
+                <div class="caption">Terminal CLI Input</div>
+            </div>
+
+            <div class="image-container" onclick="openImageModal('../image/spammailpredictionimage/img2.jpg')">
+                <img src="../image/spammailpredictionimage/img2.jpg" alt="Training Output">
+                <div class="caption">Training Output</div>
+            </div>
+
+            <div class="image-container" onclick="openImageModal('../image/spammailpredictionimage/img3.jpg')">
+                <img src="../image/spammailpredictionimage/img3.jpg" alt="Naive Bayes Model">
+                <div class="caption">Naive Bayes Model</div>
+            </div>
+
+            <div class="image-container" onclick="openImageModal('../image/spammailpredictionimage/img4.jpg')">
+                <img src="../image/spammailpredictionimage/img4.jpg" alt="Accuracy Score">
+                <div class="caption">Accuracy Score</div>
+            </div>
+
+            <div class="image-container" onclick="openImageModal('../image/spammailpredictionimage/img5.jpg')">
+                <img src="../image/spammailpredictionimage/img5.jpg" alt="Spam Classification Result">
+                <div class="caption">Spam Classification Result</div>
+            </div>
+
+            <div class="image-container" onclick="openImageModal('../image/spammailpredictionimage/img6.jpg')">
+                <img src="../image/spammailpredictionimage/img6.jpg" alt="User Input Testing">
+                <div class="caption">User Input Testing</div>
+            </div>
+
+            <div class="image-container" onclick="openImageModal('../image/spammailpredictionimage/img7.jpg')">
+                <img src="../image/spammailpredictionimage/img7.jpg" alt="End CLI View">
+                <div class="caption">End CLI View</div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <footer class="footer">
+        <p>OM KUMAR TIWARI, Portfolio Website</p>
+    </footer>
+
+    <!-- Modal Image Viewer -->
+    <div class="image-modal" id="imageModal" onclick="closeImageModal()">
+        <span class="close-image" onclick="closeImageModal()">×</span>
+        <img class="modal-img" id="modalImage" src="" alt="Full Image">
+    </div>
+
+    <script>
+        function openImageModal(src) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.style.display = 'flex';
+            modalImg.src = src;
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+
+        function scrollToSection(sectionId) {
+            const target = document.getElementById(sectionId);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+    </script>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById("navLinks");
+            navLinks.classList.toggle("show");
+        }
+    </script>
+
+
+</body>
+
+</html>

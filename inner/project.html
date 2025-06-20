@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Om Kumar - Portfolio Projects</title>
+    <link rel="stylesheet" href="project.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <script defer>
+        function openModal(index) {
+            document.getElementById('modal-' + index).style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal(index) {
+            document.getElementById('modal-' + index).style.display = 'none';
+            document.body.style.overflow = '';
+        }
+    </script>
+</head>
+
+<body>
+    <section class="intro-skills-section">
+        <div class="skills-container">
+
+            <!-- Left Side -->
+            <div class="left-side">
+                <div class="profile-image">
+                    <img src="../image/me.jpg" alt="Om Kumar">
+                </div>
+                <h2 class="name-heading">Om Kumar</h2>
+                <p><b>B.Tech CSE (Data Science) student | Frontend Developer & ML Enthusiast</b></p>
+                <br>
+                <div class="social-links">
+                    <h3 style="text-align: left;"> &nbsp; Find us on:</h3><br>
+                    <a href="https://linkedin.com/in/omkumar00116" target="_blank"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/Omkumartiwarii" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://x.com/OMKUMAR00116" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://facebook.com/share/16KjwdBgkj/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://instagram.com/om_kumar_tiwari_" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+                <br>
+                <h3 class="headline">For more information</h3>
+                <a href="contact.html" class="hire-btn">Contact Me</a>
+            </div>
+
+            <!-- Right Side -->
+            <div class="right-side">
+                <h2 class="section-title">My Projects</h2>
+                <div class="skills-grid">
+
+                    <div class="skill-card" onclick="openModal(0)">
+                        <h3>🏅 College Sports Website</h3>
+                    </div>
+
+                    <div class="skill-card" onclick="openModal(1)">
+                        <h3>📧 Spam Mail Prediction</h3>
+                    </div>
+
+                    <div class="skill-card" onclick="openModal(2)">
+                        <h3>🧠 Student Portfolio</h3>
+                    </div>
+
+                    <div class="skill-card" onclick="openModal(3)">
+                        <h3>📽 Upcoming Next Project</h3>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 0 -->
+        <div class="modal" id="modal-0" onclick="closeModal(0)">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <span class="close" onclick="closeModal(0)">×</span>
+                <br>
+                <h3 style="color:aquamarine;">🏅 College Sports Website</h3><br>
+                <p style="text-align: left;"><i>
+                        A fully responsive and visually engaging sports event website developed to simplify event
+                        discovery and registration for a college-level sports meet. The site is built using HTML, CSS,
+                        and JavaScript with animated UI features and a clean, modern layout.
+                        <br><br>
+                        <b>🏠 Modern Homepage UI:</b> Features a branded landing page with navigation, search bar, and
+                        animated particle.js background.
+                        <br><br>
+                        <b>📅 Events Listing:</b> All sports events are displayed in a card-based format, each with
+                        details and a Join Now button.
+                        <br><br>
+                        <b>📝 Join Functionality:</b> Users can register by filling a form that includes their name,
+                        email, college ID, and sport selection. Form validation is handled using JavaScript.
+                        <br><br>
+                        <b>✨ Particle.js Integration:</b> Adds interactive animated particles in the background to
+                        enhance user engagement.
+                        <br><br>
+                        <b>📱 Fully Responsive Design:</b> Optimized for mobile, tablet, and desktop using Flexbox and
+                        media queries.
+                        <br><br>
+                        <b>🎨 Clean UI:</b> Uses a dark theme and neon blue highlights (#00e5ff) with hover effects and
+                        transitions for a modern experience.
+                        <br><br>
+                        <b>Tech Stack:</b> HTML5, CSS3, JavaScript, Particle.js
+                        <br><br>
+                        <b>What I Learned:</b> Improved frontend development skills, DOM handling, UI/UX design, and
+                        third-party library integration. Gained confidence in building real-world, interactive,
+                        responsive websites.
+                        <br><br>
+                        <b style="color:antiquewhite; text-align: center; display: block;">🚀 A great showcase of
+                            frontend and UI/UX skills for academic and project use</b>
+                    </i></p><br><br>
+                <h1 style="text-align: center; color: aqua;">Want to see visuals? 📸 &nbsp;<a
+                        href="project-gallery.html" style="font-size: large; color: aquamarine;"> View Gallery </a></h1>
+                <br><br>
+            </div>
+        </div>
+
+        <!-- Modal 1 -->
+        <div class="modal" id="modal-1" onclick="closeModal(1)">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <span class="close" onclick="closeModal(1)">×</span>
+                <br>
+                <h3 style="color:aquamarine;">📧 Spam Mail Prediction</h3>
+                <p><i>
+                        Machine learning based classification project using Python.
+                        <ul>
+                            <li>Used datasets to train a Naive Bayes classifier</li>
+                            <li>Implemented basic preprocessing and vectorization</li>
+                            <li>Command-line interface for spam detection</li>
+                            <li><b>Status:</b> Project is still in progress</li>
+                        </ul>
+                    </i></p><br><br>
+                <h1 style="text-align: center; color: aqua;">Want to see visuals? 📸 &nbsp;<a
+                        href="project-gallery.html" style="font-size: large; color: aquamarine;"> View Gallery </a></h1>
+                <br><br>
+            </div>
+        </div>
+
+        <!-- Modal 2 -->
+        <div class="modal" id="modal-2" onclick="closeModal(2)">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <span class="close" onclick="closeModal(2)">×</span>
+                <br>
+                <h3 style="color:aquamarine;">🧠 Student Portfolio Website</h3><br>
+                <p style="text-align: left;"><i>
+                        A personal portfolio website created to represent my skills, academic background, and projects
+                        professionally. Designed using HTML, CSS, and JavaScript, the website serves as a digital resume
+                        for internships, networking, and showcasing my frontend development abilities.
+                        <br><br>
+                        <b>👋 Hero Section:</b> A welcoming introduction with my name, role, and a professional tagline.
+                        <br><br>
+                        <b>🧑‍💼 About Me:</b> A brief summary of my academic background, interests, and career goals.
+                        <br><br>
+                        <b>🛠️ Skills Section:</b> Interactive skill cards with progress bars and modals explaining each
+                        category like frontend, backend, DSA, programming languages, and tools.
+                        <br><br>
+                        <b>📁 Projects:</b> A section that highlights my major projects with clickable cards and
+                        modal-based details.
+                        <br><br>
+                        <b>📜 Certifications:</b> Lists of completed courses like NPTEL, Cisco, C/C++, and Python with
+                        visual badges or links.
+                        <br><br>
+                        <b>📞 Contact Section:</b> A responsive contact form and direct links to my LinkedIn, GitHub,
+                        Instagram, etc.
+                        <br><br>
+                        <b>⬇️ Resume Button:</b> A call-to-action to download my latest resume in PDF format.
+                        <br><br>
+                        <b>Tech Stack:</b> HTML5, CSS3, JavaScript, Font Awesome, Google Fonts
+                        <br><br>
+                        <b>What I Learned:</b> Enhanced skills in responsive layout design, CSS animations, semantic
+                        HTML, and user-centric UI development. Also practiced structuring a complete multi-section
+                        personal website.
+                        <br><br>
+                        <b style="color:antiquewhite; text-align: center; display: block;">💼 A digital identity built
+                            to make a strong impression in job and internship applications</b>
+                    </i>
+                </p><br><br>
+                <h1 style="text-align: center; color: aqua;">Want to see visuals? 📸 &nbsp;<a
+                        href="project-gallery.html" style="font-size: large; color: aquamarine;"> View Gallery </a></h1>
+                <br><br>
+            </div>
+        </div>
+
+        <!-- Modal 3 -->
+        <div class="modal" id="modal-3" onclick="closeModal(3)">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <span class="close" onclick="closeModal(3)">×</span>
+                <br>
+                <h3 style="color:aquamarine; text-align: center;">The information will provided after client
+                    consultation.<br><br>....... still in progess.</h3><br>
+                <p>
+                    <i>
+                    </i>
+                </p>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0a0a23;
+  color: #f1f1f1;
+  overflow-x: hidden;
+}
+
+.intro-services-section {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0a0a23;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.container-flex {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  gap: 250px;
+}
+
+.left-content {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.profile-image img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  transition: box-shadow 0.4s ease, transform 0.5s ease-in-out;
+}
+
+.profile-image img:hover {
+  box-shadow: 0 0 12px rgba(0, 229, 255, 0.4);
+  transform: translateY(-5px);
+}
+
+.name-heading {
+  font-size: 32px;
+  color: #00e5ff;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.name-heading:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px #00e5ff;
+  transform: scale(1.05);
+}
+
+.left-content p {
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.6;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.social-links a {
+  font-size: 20px;
+  margin: 0 10px;
+  text-decoration: none;
+  color: #00e5ff;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #ffffff;
+}
+
+.headline {
+  font-size: 20px;
+  color: #ffffff;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.hire-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 24px;
+  background-color: #00e5ff;
+  color: #0a0a23;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.hire-btn:hover {
+  background-color: #00bcd4;
+}
+
+.right-content {
+  flex: 2 1 500px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.section-title {
+  font-size: 30px;
+  color: #00e5ff;
+  margin-bottom: 30px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.section-title:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px #00e5ff;
+  transform: scale(1.05);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background: #1a1a2e;
+  padding: 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 229, 255, 0.2);
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 229, 255, 0.3);
+}
+
+.service-card .icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.service-card h3 {
+  font-size: 18px;
+  color: #00e5ff;
+  margin-bottom: 8px;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Modal Popup */
+.popup-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 10, 35, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background: #1a1a2e;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
+  animation: fadeIn 0.4s ease-in-out;
+  position: relative;
+}
+
+.popup-content h2 {
+  color: #00e5ff;
+  margin-bottom: 15px;
+}
+
+.popup-content p {
+  color: #ccc;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-btn:hover {
+  color: #00e5ff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1000px) {
+  .container-flex {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .name-heading {
+    font-size: 24px;
+  }
+
+  .headline {
+    font-size: 16px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .service-card h3 {
+    font-size: 16px;
+  }
+
+  .service-card p {
+    font-size: 13px;
+  }
+
+  .hire-btn {
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+
+  .popup-content {
+    padding: 20px;
+  }
+}
