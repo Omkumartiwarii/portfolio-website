@@ -26,11 +26,12 @@
 
     header {
       background: #0f172a;
-      padding: 20px 40px;
+      padding: 20px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
+      position: relative;
+      z-index: 10;
     }
 
     header h1 {
@@ -38,10 +39,53 @@
       color: #38bdf8;
     }
 
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
     nav a {
-      margin-left: 20px;
       color: #fff;
       font-weight: 500;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #0f172a;
+        position: absolute;
+        top: 70px;
+        right: 30px;
+        width: 200px;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: 25px;
+      }
     }
 
     section.about {
@@ -145,12 +189,34 @@
 <body>
   <header>
     <h1>Om Kumar</h1>
-    <nav>
+    <div class="hamburger" onclick="toggleMenu(event)">☰</div>
+    <nav id="navbar">
       <a href="../index.html">Home</a>
       <a href="skills.html">Skills</a>
       <a href="project.html">Projects</a>
     </nav>
   </header>
+
+  <script>
+    const nav = document.getElementById('navbar');
+
+    function toggleMenu(event) {
+      event.stopPropagation();
+      nav.classList.toggle('active');
+    }
+
+    document.body.addEventListener('click', () => {
+      nav.classList.remove('active');
+    });
+
+    nav.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+
+    window.addEventListener('scroll', () => {
+      nav.classList.remove('active');
+    });
+  </script>
 
   <!-- About Section -->
   <section class="about" id="about">
@@ -165,15 +231,18 @@
         <h2>About <span>Me</span></h2>
         <p>I’m <strong style="color: #38bdf8;">Om Kumar</strong>, a Computer Science (Data Science) student in my
           <strong>3rd year</strong> at Government Engineering College, Sheohar. Passionate about <strong>Frontend
-            Development</strong> and constantly exploring new technologies.</p>
+            Development</strong> and constantly exploring new technologies.
+        </p>
 
         <p>My technical toolkit includes <strong>C, C++, Python (basic)</strong>, and solid foundations in
           <strong>HTML, CSS, JavaScript</strong>. I’m also familiar with basic backend development and data structures &
-          algorithms in C.</p>
+          algorithms in C.
+        </p>
 
         <p>I’ve completed <strong>virtual internships</strong> with <span style="color: #38bdf8;">Cisco</span> and
           <span style="color: #38bdf8;">Salesforce</span>, and I’m certified in Python, C, C++ (Spoken Tutorial), and
-          NPTEL’s C Programming & ESD courses.</p>
+          NPTEL’s C Programming & ESD courses.
+        </p>
 
         <p>My projects include a <strong>College Sports Website</strong> (HTML, CSS, JS) and a <strong>Spam Mail
             Predictor</strong> using Python (basic ML). I'm enthusiastic about learning, collaborating, and solving
