@@ -110,15 +110,28 @@
     }
 
     .about-img img {
-      /* width: 400px;
-      height: 400px; */
       width: 100%;
-      max-width: 320px;
+      max-width: 300px;
       height: auto;
       object-fit: cover;
       border-radius: 50%;
       box-shadow: 0 0 30px #38bdf8;
-      margin-left: -200px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    /* Graduate badge below image */
+    .grad-badge {
+      display: inline-block;
+      margin-top: 16px;
+      background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
+      color: #0a0a23;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 16px;
+      border-radius: 20px;
     }
 
     .about-text {
@@ -128,7 +141,7 @@
 
     .about-text h2 {
       font-size: 2.5rem;
-      margin-bottom: 20px;
+      margin-bottom: 8px;
       color: #ffffff;
     }
 
@@ -136,10 +149,47 @@
       color: #38bdf8;
     }
 
+    /* Subtitle line under heading */
+    .about-text .subtitle {
+      font-size: 1rem;
+      color: #94a3b8;
+      margin-bottom: 24px;
+      letter-spacing: 0.03em;
+    }
+
+    .about-text .subtitle span {
+      color: #38bdf8;
+      font-weight: 600;
+    }
+
     .about-text p {
-      font-size: 1.1rem;
-      line-height: 1.8;
+      font-size: 1.05rem;
+      line-height: 1.85;
+      margin-bottom: 18px;
+      color: #cbd5e1;
+    }
+
+    .about-text p strong {
+      color: #f1f5f9;
+    }
+
+    /* Highlight chips for internships */
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
       margin-bottom: 20px;
+    }
+
+    .chip {
+      background: #1e293b;
+      border: 1px solid #38bdf8;
+      color: #38bdf8;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 5px 14px;
+      border-radius: 20px;
+      letter-spacing: 0.04em;
     }
 
     footer {
@@ -149,19 +199,17 @@
       color: #aaa;
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
       header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav {
-        margin-top: 10px;
+        flex-direction: row;
       }
 
       .about-img img {
         margin: 0 auto;
+      }
+
+      .about-text h2 {
+        font-size: 2rem;
       }
     }
 
@@ -170,17 +218,12 @@
         font-size: 1.5rem;
       }
 
-      nav a {
-        margin-left: 10px;
-        font-size: 0.9rem;
-      }
-
       .about-text h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
 
       .about-text p {
-        font-size: 1rem;
+        font-size: 0.98rem;
       }
     }
   </style>
@@ -221,36 +264,52 @@
   <!-- About Section -->
   <section class="about" id="about">
     <div class="container">
+
       <!-- Left: Image -->
       <div class="about-img">
         <img src="../image/me.jpg" alt="Om Kumar">
+        <div class="grad-badge">🎓 B.Tech Graduate</div>
       </div>
 
       <!-- Right: Text -->
       <div class="about-text">
         <h2>About <span>Me</span></h2>
-        <p>I’m <strong style="color: #38bdf8;">Om Kumar</strong>, a Computer Science (Data Science) student in my
-          <strong>3rd year</strong> at Government Engineering College, Sheohar. Passionate about <strong>Frontend
-            Development</strong> and constantly exploring new technologies.
+        <p class="subtitle">B.Tech in Computer Science <span>(Data Science)</span> &mdash; Government Engineering College, Sheohar</p>
+
+        <p>
+          I'm <strong style="color: #38bdf8;">Om Kumar</strong>, a fresher B.Tech graduate passionate about
+          <strong>Frontend Development</strong> and always looking to explore new technologies and real-world challenges.
         </p>
 
-        <p>My technical toolkit includes <strong>C, C++, Python (basic)</strong>, and solid foundations in
-          <strong>HTML, CSS, JavaScript</strong>. I’m also familiar with basic backend development and data structures &
-          algorithms in C.
+        <p>
+          My technical toolkit includes <strong>C, C++, Python (basic)</strong>, and solid foundations in
+          <strong>HTML, CSS, JavaScript</strong>. I also have working knowledge of basic backend development
+          and data structures &amp; algorithms in C.
         </p>
 
-        <p>I’ve completed <strong>virtual internships</strong> with <span style="color: #38bdf8;">Cisco</span> and
-          <span style="color: #38bdf8;">Salesforce</span>, and I’m certified in Python, C, C++ (Spoken Tutorial), and
-          NPTEL’s C Programming & ESD courses.
+        <p>I've completed virtual internships with:</p>
+        <div class="chips">
+          <span class="chip">Cisco</span>
+          <span class="chip">Salesforce</span>
+        </div>
+
+        <p>
+          I hold certifications in <strong>Python, C, C++</strong> (Spoken Tutorial) and have completed
+          <strong>NPTEL</strong> courses in C Programming and Embedded System Design (ESD).
         </p>
 
-        <p>My projects include a <strong>College Sports Website</strong> (HTML, CSS, JS) and a <strong>Spam Mail
-            Predictor</strong> using Python (basic ML). I'm enthusiastic about learning, collaborating, and solving
-          real-world challenges.</p>
+        <p>
+          My projects include a <strong>College Sports Website</strong> (HTML, CSS, JS) and a
+          <strong>Spam Mail Predictor</strong> using Python (basic ML). I'm enthusiastic about
+          learning, collaborating, and building things that matter.
+        </p>
 
-        <p>Fluent in <strong>Hindi</strong> and proficient in <strong>English</strong>. In my free time, I enjoy
-          learning new tech skills, reading books, and traveling.</p>
+        <p>
+          Fluent in <strong>Hindi</strong> and proficient in <strong>English</strong>.
+          In my free time, I enjoy exploring new tech, reading books, and travelling.
+        </p>
       </div>
+
     </div>
   </section>
 
